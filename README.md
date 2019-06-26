@@ -10,4 +10,4 @@ Please note, this does not play music. It only shows the layout of one.
 
 ## App In Use
 
-<img src="app_in_use.gif" width="275" height"500">
+<img src="app_in_use.gif" width="275" height="500">
