@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="6">
+
+    <ImageView
+        android:id="@+id/playlist_card_image"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_weight="2"
+        android:contentDescription="@string/playlist_icon_description"
+        android:padding="8dp"
+        android:scaleType="fitCenter"
+        tools:src="@drawable/music" />
+
+    <RelativeLayout
+        android:id="@+id/playlist_card_txt_section"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:paddingStart="8dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="8dp">
+
+        <TextView
+            android:id="@+id/playlist_card_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="Favourites" />
+
+        <TextView
+            android:id="@+id/playlist_card_num_of_songs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/playlist_card_name"
+            android:textSize="14sp"
+            tools:text="@string/number_of_songs_txt" />
+
+        <TextView
+            android:id="@+id/playlist_card_duration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/playlist_card_num_of_songs"
+            android:layout_marginTop="15dp"
+            android:textSize="14sp"
+            tools:text="@string/duration_txt" />
+
+    </RelativeLayout>
+
+</LinearLayout>

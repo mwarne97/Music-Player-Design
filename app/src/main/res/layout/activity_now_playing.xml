@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/now_playing_activity_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingStart="4dp"
+    android:paddingEnd="4dp"
+    android:weightSum="4"
+    tools:context=".NowPlayingActivity">
+
+    <ImageView
+        android:id="@+id/now_playing_activity_album_art"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:contentDescription="@string/album_art_txt_description"
+        android:scaleType="fitCenter" />
+
+    <!--Titles-->
+    <TextView
+        android:id="@+id/now_playing_activity_song_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/now_playing_activity_album_art"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:text="@string/name_of_song_txt" />
+
+    <TextView
+        android:id="@+id/now_playing_activity_artist_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/now_playing_activity_song_title"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        tools:text="@string/name_of_artist_txt" />
+
+    <TextView
+        android:id="@+id/now_playing_activity_album_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/now_playing_activity_artist_name"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        tools:text="@string/name_of_album_txt" />
+
+    <!--Time Section-->
+    <LinearLayout
+        android:id="@+id/now_playing_activity_time_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/now_playing_activity_album_name"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <TextView
+            android:id="@+id/now_playing_activity_start_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/song_time_start_txt" />
+
+        <SeekBar
+            android:id="@+id/now_playing_activity_time_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            tools:layout_editor_absoluteY="526dp" />
+
+        <TextView
+            android:id="@+id/now_playing_activity_end_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            tools:text="4:00" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/now_playing_activity_media_controls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/now_playing_activity_time_section"
+        android:layout_marginTop="35dp"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/now_playing_activity_previous_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/play_button_txt_description"
+            android:foreground="?attr/selectableItemBackground"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_skip_previous_black_24dp" />
+
+        <ImageButton
+            android:id="@+id/now_playing_activity_play_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="50dp"
+            android:layout_toEndOf="@id/now_playing_activity_previous_button"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/play_button_txt_description"
+            android:foreground="?attr/selectableItemBackground"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_play_circle_outline_black_24dp" />
+
+        <ImageButton
+            android:id="@+id/now_playing_activity_next_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="50dp"
+            android:layout_toEndOf="@id/now_playing_activity_play_button"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/play_button_txt_description"
+            android:foreground="?attr/selectableItemBackground"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_skip_next_black_24dp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/now_playing_activity_other_functions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/now_playing_activity_media_controls"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/now_playing_activity_shuffle_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/play_button_txt_description"
+            android:foreground="?attr/selectableItemBackground"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_shuffle_black_24dp" />
+
+        <ImageButton
+            android:id="@+id/now_playing_activity_favourite_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="50dp"
+            android:layout_toEndOf="@id/now_playing_activity_shuffle_button"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/play_button_txt_description"
+            android:foreground="?attr/selectableItemBackground"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_favorite_border_black_24dp" />
+
+        <ImageButton
+            android:id="@+id/now_playing_activity_repeat_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="50dp"
+            android:layout_toEndOf="@id/now_playing_activity_favourite_button"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/play_button_txt_description"
+            android:foreground="?attr/selectableItemBackground"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_repeat_black_24dp" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

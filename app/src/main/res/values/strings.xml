@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Music Player App</string>
+
+    <!--Media Play Back Buttons-->
+    <string name="play_button_txt">Play</string>
+    <string name="next_song_button_txt">Next</string>
+    <string name="prev_song_button_txt">Previous</string>
+    <string name="shuffle_button_txt">Shuffle</string>
+    <string name="repeat_button_txt">Repeat</string>
+    <string name="favourite_button_txt">Favourite</string>
+
+    <string name="add_to_playlist_option_txt">Add To Playlist</string>
+    <string name="go_to_artist_option_txt">Go To Artist</string>
+    <string name="go_to_album_option_txt">Go To Album</string>
+    <string name="view_current_playlist_option_txt">View Current Playlist</string>
+
+    <!--Place Holder Text-->
+    <string name="name_of_song_txt">Name of Track</string>
+    <string name="name_of_artist_txt">Name of Artist</string>
+    <string name="name_of_album_txt">Name of Album</string>
+    <string name="song_time_start_txt">0:00</string>
+
+    <!--Content Description-->
+    <string name="card_image_txt">Card Image</string>
+    <string name="album_art_txt_description">Album Art</string>
+    <string name="play_button_txt_description">Play Button</string>
+    <string name="playlist_icon_description">Playlist Icon</string>
+    <string name="setting_icon_description">Setting Icon</string>
+
+    <string name="number_of_albums_txt">Albums: %d</string>
+    <string name="number_of_songs_txt">Songs: %d</string>
+    <string name="duration_txt">Length: %d minutes</string>
+
+    <!--Activity Labels-->
+    <string name="artists_label">Artists</string>
+    <string name="albums_label">Albums</string>
+    <string name="playlists_label">Playlists</string>
+    <string name="settings_label">Settings</string>
+    <string name="now_playing_label">Now Playing</string>
+
+    <!--Colours For Backgrounds-->
+    <string name="albums_background_colour">#9915BD</string>
+    <string name="settings_background_colour">#787778</string>
+    <string name="playlists_background_colour">#B64F16</string>
+    <string name="artists_background_colour">#17A9E1</string>
+</resources>

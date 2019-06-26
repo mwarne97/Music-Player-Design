@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/now_playing_card_layout"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:layout_marginTop="10dp"
+    android:background="@android:color/darker_gray"
+    android:orientation="horizontal"
+    android:weightSum="8">
+
+    <ImageView
+        android:id="@+id/now_playing_card_album_art"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:contentDescription="@string/album_art_txt_description"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/album_cover_1" />
+
+    <RelativeLayout
+        android:id="@+id/now_playing_card_text_section"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4">
+
+        <TextView
+            android:id="@+id/now_playing_card_song_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:textAlignment="textStart"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:text="@string/name_of_song_txt" />
+
+        <TextView
+            android:id="@+id/now_playing_card_artist_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/now_playing_card_song_name"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:textAlignment="textStart"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            tools:text="@string/name_of_artist_txt" />
+
+        <TextView
+            android:id="@+id/now_playing_card_album_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/now_playing_card_artist_name"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:textAlignment="textStart"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            tools:text="@string/name_of_album_txt" />
+
+        <TextView
+            android:id="@+id/now_playing_card_song_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/now_playing_card_album_name"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:text="@string/song_time_start_txt"
+            android:textColor="@android:color/black" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/now_playing_card_play_button"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:layout_weight="2"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/play_button_txt_description"
+        android:padding="8dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_play_circle_outline_black_24dp" />
+
+</LinearLayout>
